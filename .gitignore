@@ -4,5 +4,6 @@
 /src/ipch
 
 /src/*.sdf
+/src/*.opensdf
 
 /src/*.suo
