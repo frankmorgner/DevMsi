@@ -6,6 +6,7 @@
 #include <vector>
 #include <SetupAPI.h>
 #include <cfgmgr32.h>
+#include <stdexcept>
 
 
 std::wstring GUID2Str( __in const GUID&  source )

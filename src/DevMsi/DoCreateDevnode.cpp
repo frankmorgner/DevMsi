@@ -7,6 +7,7 @@
 #include "AutoClose.h"
 #include "GuidStrHelpers.h"
 #include <newdev.h>
+#include <stdexcept>
 
 /**
 * An enumeration of the valid types of class arguments provided to DoCreateDevnode().

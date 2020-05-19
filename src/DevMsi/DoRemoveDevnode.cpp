@@ -5,6 +5,8 @@
 #include "ciwstring.h"
 #include "AutoClose.h"
 #include <cfgmgr32.h>
+#include <memory>
+#include <stdexcept>
 
 /**
  * An array of wide strings that do case-insensitive comparisons.
@@ -55,7 +57,7 @@ void GetDeviceRegistryProperty(__out ci_wstringList& items, __in HDEVINFO Devs, 
         }
     }
 
-    std::auto_ptr<BYTE> buffer ( new BYTE[++reqSize] );
+    auto buffer = std::make_unique<BYTE[]>(++reqSize);
     wchar_t* ptr = (wchar_t*)buffer.get();
 
     status = SetupDiGetDeviceRegistryPropertyW( Devs, &DevInfo, Prop, &dataType, buffer.get(), reqSize, &reqSize );

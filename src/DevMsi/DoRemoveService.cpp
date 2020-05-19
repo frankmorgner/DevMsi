@@ -3,6 +3,7 @@
 #include "CheckResult.h"
 #include "AutoClose.h"
 #include "ciwstring.h"
+#include <stdexcept>
 
 
 HRESULT DEVMSI_API DoRemoveService( int argc, LPWSTR* argv )
